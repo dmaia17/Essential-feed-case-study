@@ -1,0 +1,6 @@
+framework module Pods_EFCS {
+  umbrella header "Pods-EFCS-umbrella.h"
+
+  export *
+  module * { export * }
+}

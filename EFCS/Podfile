@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'EFCS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for EFCS
+
+  pod 'Alamofire', '~> 5.5'
+
+  target 'EFCSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'EFCSUITests' do
+    # Pods for testing
+  end
+
+end
