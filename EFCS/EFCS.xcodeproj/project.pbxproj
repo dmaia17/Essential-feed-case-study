@@ -19,6 +19,7 @@
 		51A0315727FF79FD0014AB89 /* EFCSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A0315627FF79FD0014AB89 /* EFCSUITests.swift */; };
 		51A0315927FF79FD0014AB89 /* EFCSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A0315827FF79FD0014AB89 /* EFCSUITestsLaunchTests.swift */; };
 		51A0316627FF7AF60014AB89 /* RemoteFeedLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A0316527FF7AF60014AB89 /* RemoteFeedLoaderTests.swift */; };
+		51A0316F27FF96000014AB89 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A0316E27FF96000014AB89 /* RemoteFeedLoader.swift */; };
 		C2C25B250ADB2C6300A70E0A /* Pods_EFCS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCFB61868B930259BB3B95D8 /* Pods_EFCS.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		51A0315627FF79FD0014AB89 /* EFCSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFCSUITests.swift; sourceTree = "<group>"; };
 		51A0315827FF79FD0014AB89 /* EFCSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EFCSUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		51A0316527FF7AF60014AB89 /* RemoteFeedLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoaderTests.swift; sourceTree = "<group>"; };
+		51A0316E27FF96000014AB89 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		77886F7AE7CBB7578D8C286A /* Pods-EFCS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFCS.release.xcconfig"; path = "Target Support Files/Pods-EFCS/Pods-EFCS.release.xcconfig"; sourceTree = "<group>"; };
 		C1F2DD06FF40C12E0266D3B5 /* Pods-EFCS-EFCSUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFCS-EFCSUITests.release.xcconfig"; path = "Target Support Files/Pods-EFCS-EFCSUITests/Pods-EFCS-EFCSUITests.release.xcconfig"; sourceTree = "<group>"; };
 		CCFB61868B930259BB3B95D8 /* Pods_EFCS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFCS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,13 +120,10 @@
 		51A0313427FF79F90014AB89 /* EFCS */ = {
 			isa = PBXGroup;
 			children = (
-				51A0313527FF79F90014AB89 /* AppDelegate.swift */,
-				51A0313727FF79F90014AB89 /* SceneDelegate.swift */,
-				51A0313927FF79F90014AB89 /* ViewController.swift */,
-				51A0313B27FF79F90014AB89 /* Main.storyboard */,
-				51A0313E27FF79FD0014AB89 /* Assets.xcassets */,
-				51A0314027FF79FD0014AB89 /* LaunchScreen.storyboard */,
-				51A0314327FF79FD0014AB89 /* Info.plist */,
+				51A0316927FF94E80014AB89 /* APIs */,
+				51A0316727FF94CD0014AB89 /* Configurations */,
+				51A0316827FF94DA0014AB89 /* Modules */,
+				51A0316A27FF94F40014AB89 /* Resources */,
 			);
 			path = EFCS;
 			sourceTree = "<group>";
@@ -145,6 +144,66 @@
 				51A0315827FF79FD0014AB89 /* EFCSUITestsLaunchTests.swift */,
 			);
 			path = EFCSUITests;
+			sourceTree = "<group>";
+		};
+		51A0316727FF94CD0014AB89 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				51A0313527FF79F90014AB89 /* AppDelegate.swift */,
+				51A0313727FF79F90014AB89 /* SceneDelegate.swift */,
+				51A0314327FF79FD0014AB89 /* Info.plist */,
+			);
+			path = Configurations;
+			sourceTree = "<group>";
+		};
+		51A0316827FF94DA0014AB89 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				51A0316B27FF951E0014AB89 /* Feed */,
+				51A0316D27FF95790014AB89 /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		51A0316927FF94E80014AB89 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				51A0316C27FF95280014AB89 /* Feed */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		51A0316A27FF94F40014AB89 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				51A0313E27FF79FD0014AB89 /* Assets.xcassets */,
+				51A0314027FF79FD0014AB89 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		51A0316B27FF951E0014AB89 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		51A0316C27FF95280014AB89 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				51A0316E27FF96000014AB89 /* RemoteFeedLoader.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		51A0316D27FF95790014AB89 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				51A0313927FF79F90014AB89 /* ViewController.swift */,
+				51A0313B27FF79F90014AB89 /* Main.storyboard */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		FA8EB375FA0B8B6A168BE2B0 /* Frameworks */ = {
@@ -409,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51A0316F27FF96000014AB89 /* RemoteFeedLoader.swift in Sources */,
 				51A0313A27FF79F90014AB89 /* ViewController.swift in Sources */,
 				51A0313627FF79F90014AB89 /* AppDelegate.swift in Sources */,
 				51A0313827FF79F90014AB89 /* SceneDelegate.swift in Sources */,
@@ -593,7 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EFCS/Info.plist;
+				INFOPLIST_FILE = EFCS/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -621,7 +681,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = EFCS/Info.plist;
+				INFOPLIST_FILE = EFCS/Configurations/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
